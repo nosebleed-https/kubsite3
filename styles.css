@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+
+    background-image: url("images/logofon.jpg");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ОБЩИЙ КОНТЕЙНЕР */
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* HEADER */
+
+.site-header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid #ccc;
+}
+
+.header-inner {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* NAV */
+
+.site-nav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-inner {
+    min-height: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.site-nav a {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    color: #0645ad;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.site-nav a:hover {
+    background: #e8eef8;
+}
+
+/* MAIN */
+
+main.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.88);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*
+    В HTML список ссылок расположен раньше таблицы.
+    На мобильном таблица должна отображаться выше списка.
+*/
+.links-section {
+    order: 2;
+}
+
+.table-section {
+    order: 1;
+}
+
+.form-section {
+    order: 3;
+}
+
+.content-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* LINKS */
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.no-href {
+    color: #0645ad;
+    cursor: default;
+}
+
+/* КАРТА ССЫЛОК */
+
+.image-map {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.image-map img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.applicant-link {
+    position: absolute;
+    top: 0;
+    left: 16.7%;
+    width: 66.6%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+th,
+td {
+    border: 1px solid #333;
+    padding: 7px;
+    text-align: center;
+}
+
+th {
+    background: #d9e2f3;
+}
+
+tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background: #eee;
+}
+
+/* FORM */
+
+form {
+    width: 100%;
+    max-width: 700px;
+}
+
+form p {
+    margin: 15px 0;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+fieldset label {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* BUTTON */
+
+button {
+    padding: 10px 20px;
+    font: inherit;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: #e8e8e8;
+}
+
+button:hover {
+    background: #d8d8d8;
+}
+
+/* MESSAGE */
+
+.message {
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background: #f1f1f1;
+}
+
+/* FOOTER */
+
+.site-footer {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    border-top: 1px solid #ccc;
+}
+
+.site-footer .container {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-footer p {
+    margin: 0;
+    text-align: center;
+}
+
+/*
+    TABLET / DESKTOP
+    Mobile First:
+    сначала идут мобильные правила,
+    затем здесь правила для больших экранов.
+*/
+
+@media (min-width: 701px) {
+
+    /* HEADER */
+
+    .header-inner {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .site-header h1 {
+        font-size: 30px;
+    }
+
+    /* NAV */
+
+    .nav-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .site-nav a {
+        width: auto;
+        padding: 10px 18px;
+    }
+
+    /* MAIN */
+
+    /*
+        На больших экранах возвращаем
+        обычный порядок HTML:
+        список -> таблица -> форма.
+    */
+
+    .links-section {
+        order: 1;
+    }
+
+    .table-section {
+        order: 2;
+    }
+
+    .form-section {
+        order: 3;
+    }
+
+    /* КАРТА ССЫЛОК */
+
+    .applicant-link {
+        left: 80px;
+        width: 320px;
+        height: 320px;
+    }
+
+    /* TABLE */
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
